@@ -1,7 +1,6 @@
 * {
    padding: 0;
    margin: 0;
-
 header { 
     background-color: transparent;
     position: fixed;
@@ -13,6 +12,7 @@ header {
     height: 15%;
     transform: (translateY(0));
     transition: transform .5s ease-in-out;
+    z-index: 1;
     .header_wrapper {
         width: 100%;
         display: flex;
@@ -21,7 +21,7 @@ header {
         align-items: center;
         max-width: 1420px;
         margin: 0 auto;
-        padding: 5%;
+        padding: 5%; 
         .header_logo {
             display: flex;
             justify-content: flex-start;
@@ -62,20 +62,19 @@ header {
                     font-size: 1.2rem;
                     font-family: 'Poppins', sans-serif;
                     margin: 4%;
-                    text-decoration: none;                  
+                    text-decoration: none;                
                     }
                 button {
                         width: 140px;
                         height: 70px;
                         white-space: nowrap;
                         border: 0px;
-                     border-color: transparent;
+                        border-color: transparent;
                         border-radius: 5%;
                         font-size: 1.2rem;
                         letter-spacing: 0.5px;
                         font-family: 'Poppins', sans-serif;
                         color: white; 
-                        background-color: #f6ca43;
                         background-image: linear-gradient(to right, #00bfff 0%, #007ddb 100%);
                 }
         }
@@ -87,7 +86,12 @@ header {
 }
 main {
     background-image: url("../img/Vector_Smart_Object41.jpg");
+    height: 100vh;
 }
+section {
+    background-image: url("../img/bg.jpg");
+}
+
 .main {
     background-position: center;
     background-size: cover;
@@ -124,7 +128,7 @@ main {
         }
         .info_btn {
             width: 40%;
-            height: 12%;
+            height: 6vw;
             padding-top: 5%;
             a {
                 width: 100%;
@@ -160,19 +164,20 @@ main {
                         color: #b7b7b7;
                         padding-left: 10%;
                       }
+                    
                 }
                 .submit {
                     height: 100%;
                     width: 35%;
                     margin-right: 2%;
-                        border: 0px;
-                        border-color: transparent;
-                        border-radius: 0 5px 5px 0;
-                        font-size: 1rem;
-                        letter-spacing: 0.5px;
-                        font-family: 'Poppins', sans-serif;
-                        color: white;
-                        background-image: linear-gradient(-120deg, #00bfff 0%, #007ddb 100%);
+                    border: 0px;
+                    border-color: transparent;
+                    border-radius: 0 5px 5px 0;
+                    font-size: 1rem;
+                    letter-spacing: 0.5px;
+                    font-family: 'Poppins', sans-serif;
+                    color: white;
+                    background-image: linear-gradient(-120deg, #00bfff 0%, #007ddb 100%);
                 }
         }
         p:last-child {
@@ -230,7 +235,7 @@ main {
                     color: #fff;
                     background-color: #431cb3;
                     font-family: 'Poppins', sans-serif;
-                    width: 40%;
+                    width: 40%;   
                     .temperature_weather_icon {
                         position: absolute;
                         width: 100%;
@@ -241,6 +246,7 @@ main {
                     .temperature_value {
                         font-size: 8rem;
                         line-height: 7rem;
+                        z-index: 2;
                     }
                     .temperature_discription {
                         font-size: 2rem; 
@@ -254,31 +260,7 @@ main {
                     background-color: #3e17b4;
 
                     width: 58%;
-                    .weather_pressure {
-                        width: 100%;
-                        display: flex;
-                        align-items: center;
-                        font-size: 2rem;
-                        height: 20%;
-                        font-family: 'Poppins', sans-serif;
-                        img {
-                            width: 15%;
-                            padding: 5%;
-                        }
-                    }
-                    .weather_humidity {
-                        width: 100%;
-                        display: flex;
-                        align-items: center;
-                        font-size: 2rem;
-                        height: 20%;
-                        font-family: 'Poppins', sans-serif;
-                        img {
-                            width: 15%;
-                            padding: 5%;
-                        }
-                    }
-                    .weather_wind {
+                    .weather_pressure,.weather_humidity,.weather_wind {
                         width: 100%;
                         display: flex;
                         align-items: center;
@@ -359,10 +341,12 @@ main {
             }
             &.expanded {
                 background-image: linear-gradient(-70deg, #210594 0%, #4114b8 100%);
+
                 &:after {
                     transform: rotate(180deg);
                     transition: all ease .5s;
                   }
+
                 .item {
                     display: block;
                 }
@@ -388,9 +372,16 @@ main {
             }
         }
     }
-}
-section {
-    background-image: url("../img/bg.jpg");
+    .chat {
+        img{
+        position: fixed;
+        width: auto;
+        z-index: 2;
+        height: 8%;
+        right: 0;
+        bottom: 0;
+        }   
+    }
 }
 
 footer {
@@ -428,22 +419,16 @@ footer {
 }
 
 @media screen and ( max-width: 1024px ) and ( orientation: portrait ) {
-* { padding: 0;
-    margin: 0;
+ * { 
     header {
-        display: flex;
-        flex-direction: row;
         .header_wrapper {
-            display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
             position: relative;
             .header_logo {
                 justify-content: center;
             }
-            .sandwich_menu {
-                
+            .sandwich_menu { 
                 display: flex;
                 justify-content: center;
                 padding: 3%;
@@ -453,6 +438,9 @@ footer {
                 position: absolute;
                 margin-top: 10%;
                 width: 80%;
+                a {
+                    font-size: 2vh;
+                }
             }
         }
     }
@@ -465,6 +453,7 @@ footer {
                 justify-content: flex-end;
                 text-align: center;
                 height: 40%;
+                width: 50%;
                 h2 {
                     font-size: 3vh;
                 }
@@ -477,6 +466,10 @@ footer {
             }
             .side_content {
                 height: 40%;
+                width: 70%;
+                img {
+                    width: 100%;
+                }
                 .side_content_wrapper {
                     .weather_report {
                         .weather_header_info {
@@ -486,7 +479,6 @@ footer {
                             .weather_header_date {
                                 font-size: 1.2vh;
                             }
-
                         }
                     }
                     .weather_widget {
@@ -544,21 +536,11 @@ footer {
 }
 @media screen and ( max-width: 812px ) and ( orientation: landscape ) {
 * {
-    padding: 0;
-    margin: 0;
     header {
-        display: flex;
-        flex-direction: row;
         .header_wrapper {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
             position: relative;
-            padding: 5%;
             max-width: 676px;
             .header_logo {
-       
                 p, p span {
                     font-size: 2vw;
                 }
@@ -585,13 +567,15 @@ footer {
             }
         }
     }
+    main {
+        height: auto;
+    }
     .main {
         .content_wrapper {
             max-width: 676px;
-            padding: 5% 5% 0 5%;
+            padding: 2% 5% 0 5%;
             .main_content {
                 padding-bottom: 0;
-                justify-content: center;
                 h2 {
                     font-size: 3vw;
                 }
@@ -658,9 +642,6 @@ footer {
             }
         }
         .faq {
-            h2 {
-            font-size: 3vw;
-            }
             .faq_container {
                 .title p {
                     font-size: 2.5vw;
@@ -692,32 +673,18 @@ footer {
 }
 }
 @media screen and ( max-width: 414px ) and ( orientation: portrait ) {
-    * { padding: 0;
-        margin: 0;
+    * { 
         header {
-            display: flex;
-            flex-direction: row;
             .header_wrapper {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                position: relative;
                 .header_logo {
-                    justify-content: center;
                     p, p span {
                         font-size: 2vh;
                     }
                 }
                 .sandwich_menu {
                     font-size: 3vh;
-                    display: flex;
-                    justify-content: center;
-                    padding: 3%;
                 }
                 .header_nav {
-                    display: none;
-                    position: absolute;
                     margin-top: 25%;
                     width: 100%;
                     padding-left: 15%;
@@ -730,23 +697,21 @@ footer {
                         height: 50px;
                         font-size: 2vh;
                     }
+                    
+                }
+                &.hidden {
+                    display: none;
                 }
             }
         }
         .main {
             .content_wrapper {
-                justify-content: center;
                 .main_content {
-                    height: 40%;
                     width: 90%;
-                    h2 {
-                        font-size: 3vh;
-                    }
                     p {
                         font-size: 2vh;
                     }
                     .info_btn {
-                    align-self: center;
                     height: 5vh;
                         a {
                             font-size: 2vh;
@@ -760,7 +725,6 @@ footer {
                     }
                 }
                 .side_content {
-                    height: 40%;
                     width: 90%;
                     img {
                         width: 100%;
@@ -769,9 +733,6 @@ footer {
             }
             .faq {
                 width: 90%;
-                h2 {
-                font-size: 3vh;
-                }
                 .faq_container {
                     .title p {
                         font-size: 2.2vh;
@@ -791,7 +752,6 @@ footer {
                     height: 20vh;
                     margin-bottom: 10%;
                     img {
-
                         padding: 15%;
                         width: auto;
                     }
