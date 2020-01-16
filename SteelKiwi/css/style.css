@@ -23,7 +23,8 @@
     -webkit-transition: -webkit-transform .5s ease-in-out;
     transition: -webkit-transform .5s ease-in-out;
     transition: transform .5s ease-in-out;
-    transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out; }
+    transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+    z-index: 1; }
     * header .header_wrapper {
       width: 100%;
       display: -webkit-box;
@@ -99,7 +100,6 @@
           letter-spacing: 0.5px;
           font-family: 'Poppins', sans-serif;
           color: white;
-          background-color: #f6ca43;
           background-image: -webkit-gradient(linear, left top, right top, from(#00bfff), to(#007ddb));
           background-image: linear-gradient(to right, #00bfff 0%, #007ddb 100%); }
     * header.hidden {
@@ -110,7 +110,10 @@
       transition: transform .5s ease-in-out;
       transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out; }
   * main {
-    background-image: url("../img/Vector_Smart_Object41.jpg"); }
+    background-image: url("../img/Vector_Smart_Object41.jpg");
+    height: 100vh; }
+  * section {
+    background-image: url("../img/bg.jpg"); }
   * .main {
     background-position: center;
     background-size: cover;
@@ -160,7 +163,7 @@
         white-space: pre-line; }
       * .main .main_content .info_btn {
         width: 40%;
-        height: 12%;
+        height: 6vw;
         padding-top: 5%; }
         * .main .main_content .info_btn a {
           width: 100%;
@@ -310,7 +313,8 @@
                 opacity: 0.2; }
             * .main .side_content .side_content_wrapper .weather_widget .temperature .temperature_value {
               font-size: 8rem;
-              line-height: 7rem; }
+              line-height: 7rem;
+              z-index: 2; }
             * .main .side_content .side_content_wrapper .weather_widget .temperature .temperature_discription {
               font-size: 2rem; }
           * .main .side_content .side_content_wrapper .weather_widget .weather_details {
@@ -327,7 +331,7 @@
             color: #fff;
             background-color: #3e17b4;
             width: 58%; }
-            * .main .side_content .side_content_wrapper .weather_widget .weather_details .weather_pressure {
+            * .main .side_content .side_content_wrapper .weather_widget .weather_details .weather_pressure, * .main .side_content .side_content_wrapper .weather_widget .weather_details .weather_humidity, * .main .side_content .side_content_wrapper .weather_widget .weather_details .weather_wind {
               width: 100%;
               display: -webkit-box;
               display: -ms-flexbox;
@@ -338,35 +342,7 @@
               font-size: 2rem;
               height: 20%;
               font-family: 'Poppins', sans-serif; }
-              * .main .side_content .side_content_wrapper .weather_widget .weather_details .weather_pressure img {
-                width: 15%;
-                padding: 5%; }
-            * .main .side_content .side_content_wrapper .weather_widget .weather_details .weather_humidity {
-              width: 100%;
-              display: -webkit-box;
-              display: -ms-flexbox;
-              display: flex;
-              -webkit-box-align: center;
-                  -ms-flex-align: center;
-                      align-items: center;
-              font-size: 2rem;
-              height: 20%;
-              font-family: 'Poppins', sans-serif; }
-              * .main .side_content .side_content_wrapper .weather_widget .weather_details .weather_humidity img {
-                width: 15%;
-                padding: 5%; }
-            * .main .side_content .side_content_wrapper .weather_widget .weather_details .weather_wind {
-              width: 100%;
-              display: -webkit-box;
-              display: -ms-flexbox;
-              display: flex;
-              -webkit-box-align: center;
-                  -ms-flex-align: center;
-                      align-items: center;
-              font-size: 2rem;
-              height: 20%;
-              font-family: 'Poppins', sans-serif; }
-              * .main .side_content .side_content_wrapper .weather_widget .weather_details .weather_wind img {
+              * .main .side_content .side_content_wrapper .weather_widget .weather_details .weather_pressure img, * .main .side_content .side_content_wrapper .weather_widget .weather_details .weather_humidity img, * .main .side_content .side_content_wrapper .weather_widget .weather_details .weather_wind img {
                 width: 15%;
                 padding: 5%; }
             * .main .side_content .side_content_wrapper .weather_widget .weather_details .weather_forecast_info {
@@ -455,8 +431,13 @@
         border-radius: 5px; }
         * .main .sponsor .sponsor_logo img {
           width: 70%; }
-  * section {
-    background-image: url("../img/bg.jpg"); }
+    * .main .chat img {
+      position: fixed;
+      width: auto;
+      z-index: 2;
+      height: 8%;
+      right: 0;
+      bottom: 0; }
   * footer {
     width: 100%;
     height: 5vh;
@@ -499,348 +480,260 @@
           cursor: pointer; }
 
 @media screen and (max-width: 1024px) and (orientation: portrait) {
-  * {
-    padding: 0;
-    margin: 0; }
-    * header {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row; }
-      * header .header_wrapper {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        position: relative; }
-        * header .header_wrapper .header_logo {
-          -webkit-box-pack: center;
-              -ms-flex-pack: center;
-                  justify-content: center; }
-        * header .header_wrapper .sandwich_menu {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-pack: center;
-              -ms-flex-pack: center;
-                  justify-content: center;
-          padding: 3%; }
-        * header .header_wrapper .header_nav {
-          display: none;
-          position: absolute;
-          margin-top: 10%;
-          width: 80%; }
-    * .main .content_wrapper {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
+  * header .header_wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative; }
+    * header .header_wrapper .header_logo {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; }
-      * .main .content_wrapper .main_content {
-        padding-bottom: 5%;
-        -webkit-box-pack: end;
-            -ms-flex-pack: end;
-                justify-content: flex-end;
-        text-align: center;
-        height: 40%; }
-        * .main .content_wrapper .main_content h2 {
-          font-size: 3vh; }
-        * .main .content_wrapper .main_content p {
-          font-size: 1.5vh; }
-        * .main .content_wrapper .main_content .info_btn {
-          -ms-flex-item-align: center;
-              align-self: center; }
-      * .main .content_wrapper .side_content {
-        height: 40%; }
-        * .main .content_wrapper .side_content .side_content_wrapper .weather_report .weather_header_info .weather_header_report {
-          font-size: 1.7vh; }
-        * .main .content_wrapper .side_content .side_content_wrapper .weather_report .weather_header_info .weather_header_date {
-          font-size: 1.2vh; }
-        * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .temperature .temperature_value {
-          font-size: 8vh;
-          line-height: 7vh; }
-        * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .temperature .temperature_discription {
-          font-size: 2vh; }
-        * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .weather_details .weather_pressure {
-          font-size: 2vh; }
-        * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .weather_details .weather_humidity {
-          font-size: 2vh; }
-        * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .weather_details .weather_wind {
-          font-size: 2vh; }
-        * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .weather_details .weather_forecast_info h3 {
-          font-size: 1.2vh; }
-        * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .weather_details .weather_forecast_info p {
-          font-size: 0.9vh; }
-    * .main .faq h2 {
-      font-size: 3vh; }
-    * .main .faq .faq_container .title p {
-      font-size: 2vh; }
-    * .main .faq .faq_container .item p:last-child {
-      font-size: 1.6vh; }
-    * footer .footer_wrapper .footer_icons {
-      width: 30%; } }
-@media screen and (max-width: 812px) and (orientation: landscape) {
-  * {
-    padding: 0;
-    margin: 0; }
-    * header {
+    * header .header_wrapper .sandwich_menu {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row; }
-      * header .header_wrapper {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
-        position: relative;
-        padding: 5%;
-        max-width: 676px; }
-        * header .header_wrapper .header_logo p, * header .header_wrapper .header_logo p span {
-          font-size: 2vw; }
-        * header .header_wrapper .sandwich_menu {
-          font-size: 3vw;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-pack: center;
-              -ms-flex-pack: center;
-                  justify-content: center; }
-        * header .header_wrapper .header_nav {
-          display: none;
-          position: absolute;
-          margin-top: 10%;
-          width: 100%;
-          text-align: center; }
-          * header .header_wrapper .header_nav a {
-            font-size: 2vw; }
-          * header .header_wrapper .header_nav button {
-            width: 100px;
-            height: 50px;
-            font-size: 2vw; }
-    * .main .content_wrapper {
-      max-width: 676px;
-      padding: 5% 5% 0 5%; }
-      * .main .content_wrapper .main_content {
-        padding-bottom: 0;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center; }
-        * .main .content_wrapper .main_content h2 {
-          font-size: 3vw; }
-        * .main .content_wrapper .main_content p {
-          font-size: 1.5vw; }
-        * .main .content_wrapper .main_content form {
-          height: 15%; }
-          * .main .content_wrapper .main_content form .search::-webkit-input-placeholder {
-            font-size: 1.5vw; }
-          * .main .content_wrapper .main_content form .search:-ms-input-placeholder {
-            font-size: 1.5vw; }
-          * .main .content_wrapper .main_content form .search::-ms-input-placeholder {
-            font-size: 1.5vw; }
-          * .main .content_wrapper .main_content form .search::placeholder {
-            font-size: 1.5vw; }
-          * .main .content_wrapper .main_content form .submit {
-            font-size: 1.5vw; }
-        * .main .content_wrapper .main_content .info_btn {
-          -ms-flex-item-align: center;
-              align-self: center; }
-          * .main .content_wrapper .main_content .info_btn a {
-            font-size: 2vw; }
-      * .main .content_wrapper .side_content .side_content_wrapper {
-        height: auto; }
-        * .main .content_wrapper .side_content .side_content_wrapper .weather_report .weather_header_info .weather_header_report {
-          font-size: 2.2vw; }
-        * .main .content_wrapper .side_content .side_content_wrapper .weather_report .weather_header_info .weather_header_date {
-          font-size: 1.6vw; }
-        * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .temperature .temperature_value {
-          font-size: 11vw;
-          line-height: 9vw; }
-        * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .temperature .temperature_discription {
-          font-size: 3vw; }
-        * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .weather_details .weather_pressure, * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .weather_details .weather_humidity, * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .weather_details .weather_wind {
-          height: 20%;
-          font-size: 2.5vw; }
-        * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .weather_details .weather_forecast_info {
-          padding-top: 0;
-          padding-right: 0; }
-          * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .weather_details .weather_forecast_info h3 {
-            font-size: 1.4vw; }
-          * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .weather_details .weather_forecast_info p {
-            font-size: 1.2vw; }
-    * .main .faq h2 {
-      font-size: 3vw; }
-    * .main .faq .faq_container .title p {
-      font-size: 2.5vw; }
-    * .main .faq .faq_container .item p:last-child {
-      font-size: 2vw; }
-    * footer {
-      height: 7vw; }
-      * footer .footer_wrapper {
-        width: 90%; }
-        * footer .footer_wrapper .footer_info {
-          font-size: 2vw; }
-        * footer .footer_wrapper .footer_icons {
-          width: 30%; }
-          * footer .footer_wrapper .footer_icons a img {
-            height: auto; } }
-@media screen and (max-width: 414px) and (orientation: portrait) {
-  * {
-    padding: 0;
-    margin: 0; }
-    * header {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row; }
-      * header .header_wrapper {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        position: relative; }
-        * header .header_wrapper .header_logo {
-          -webkit-box-pack: center;
-              -ms-flex-pack: center;
-                  justify-content: center; }
-          * header .header_wrapper .header_logo p, * header .header_wrapper .header_logo p span {
-            font-size: 2vh; }
-        * header .header_wrapper .sandwich_menu {
-          font-size: 3vh;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-pack: center;
-              -ms-flex-pack: center;
-                  justify-content: center;
-          padding: 3%; }
-        * header .header_wrapper .header_nav {
-          display: none;
-          position: absolute;
-          margin-top: 25%;
-          width: 100%;
-          padding-left: 15%; }
-          * header .header_wrapper .header_nav a {
-            font-size: 2vh;
-            padding: 4%; }
-          * header .header_wrapper .header_nav button {
-            width: 100px;
-            height: 50px;
-            font-size: 2vh; }
-    * .main .content_wrapper {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
-              justify-content: center; }
-      * .main .content_wrapper .main_content {
-        height: 40%;
-        width: 90%; }
-        * .main .content_wrapper .main_content h2 {
-          font-size: 3vh; }
-        * .main .content_wrapper .main_content p {
-          font-size: 2vh; }
-        * .main .content_wrapper .main_content .info_btn {
-          -ms-flex-item-align: center;
-              align-self: center;
-          height: 5vh; }
-          * .main .content_wrapper .main_content .info_btn a {
-            font-size: 2vh; }
-        * .main .content_wrapper .main_content .search::-webkit-input-placeholder {
-          font-size: 1.5vh; }
-        * .main .content_wrapper .main_content .search:-ms-input-placeholder {
-          font-size: 1.5vh; }
-        * .main .content_wrapper .main_content .search::-ms-input-placeholder {
-          font-size: 1.5vh; }
-        * .main .content_wrapper .main_content .search::placeholder {
-          font-size: 1.5vh; }
-        * .main .content_wrapper .main_content .submit {
-          font-size: 1.8vh; }
-      * .main .content_wrapper .side_content {
-        height: 40%;
-        width: 90%; }
-        * .main .content_wrapper .side_content img {
-          width: 100%; }
-    * .main .faq {
-      width: 90%; }
-      * .main .faq h2 {
+              justify-content: center;
+      padding: 3%; }
+    * header .header_wrapper .header_nav {
+      display: none;
+      position: absolute;
+      margin-top: 10%;
+      width: 80%; }
+      * header .header_wrapper .header_nav a {
+        font-size: 2vh; }
+  * .main .content_wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    * .main .content_wrapper .main_content {
+      padding-bottom: 5%;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      text-align: center;
+      height: 40%;
+      width: 50%; }
+      * .main .content_wrapper .main_content h2 {
         font-size: 3vh; }
-      * .main .faq .faq_container .title p {
-        font-size: 2.2vh; }
-      * .main .faq .faq_container .item p:last-child {
-        font-size: 1.8vh; }
-    * .main .sponsor {
+      * .main .content_wrapper .main_content p {
+        font-size: 1.5vh; }
+      * .main .content_wrapper .main_content .info_btn {
+        -ms-flex-item-align: center;
+            align-self: center; }
+    * .main .content_wrapper .side_content {
+      height: 40%;
+      width: 70%; }
+      * .main .content_wrapper .side_content img {
+        width: 100%; }
+      * .main .content_wrapper .side_content .side_content_wrapper .weather_report .weather_header_info .weather_header_report {
+        font-size: 1.7vh; }
+      * .main .content_wrapper .side_content .side_content_wrapper .weather_report .weather_header_info .weather_header_date {
+        font-size: 1.2vh; }
+      * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .temperature .temperature_value {
+        font-size: 8vh;
+        line-height: 7vh; }
+      * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .temperature .temperature_discription {
+        font-size: 2vh; }
+      * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .weather_details .weather_pressure {
+        font-size: 2vh; }
+      * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .weather_details .weather_humidity {
+        font-size: 2vh; }
+      * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .weather_details .weather_wind {
+        font-size: 2vh; }
+      * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .weather_details .weather_forecast_info h3 {
+        font-size: 1.2vh; }
+      * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .weather_details .weather_forecast_info p {
+        font-size: 0.9vh; }
+  * .main .faq h2 {
+    font-size: 3vh; }
+  * .main .faq .faq_container .title p {
+    font-size: 2vh; }
+  * .main .faq .faq_container .item p:last-child {
+    font-size: 1.6vh; }
+  * footer .footer_wrapper .footer_icons {
+    width: 30%; } }
+@media screen and (max-width: 812px) and (orientation: landscape) {
+  * header .header_wrapper {
+    position: relative;
+    max-width: 676px; }
+    * header .header_wrapper .header_logo p, * header .header_wrapper .header_logo p span {
+      font-size: 2vw; }
+    * header .header_wrapper .sandwich_menu {
+      font-size: 3vw;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+    * header .header_wrapper .header_nav {
+      display: none;
+      position: absolute;
+      margin-top: 10%;
+      width: 100%;
+      text-align: center; }
+      * header .header_wrapper .header_nav a {
+        font-size: 2vw; }
+      * header .header_wrapper .header_nav button {
+        width: 100px;
+        height: 50px;
+        font-size: 2vw; }
+  * main {
+    height: auto; }
+  * .main .content_wrapper {
+    max-width: 676px;
+    padding: 2% 5% 0 5%; }
+    * .main .content_wrapper .main_content {
+      padding-bottom: 0; }
+      * .main .content_wrapper .main_content h2 {
+        font-size: 3vw; }
+      * .main .content_wrapper .main_content p {
+        font-size: 1.5vw; }
+      * .main .content_wrapper .main_content form {
+        height: 15%; }
+        * .main .content_wrapper .main_content form .search::-webkit-input-placeholder {
+          font-size: 1.5vw; }
+        * .main .content_wrapper .main_content form .search:-ms-input-placeholder {
+          font-size: 1.5vw; }
+        * .main .content_wrapper .main_content form .search::-ms-input-placeholder {
+          font-size: 1.5vw; }
+        * .main .content_wrapper .main_content form .search::placeholder {
+          font-size: 1.5vw; }
+        * .main .content_wrapper .main_content form .submit {
+          font-size: 1.5vw; }
+      * .main .content_wrapper .main_content .info_btn {
+        -ms-flex-item-align: center;
+            align-self: center; }
+        * .main .content_wrapper .main_content .info_btn a {
+          font-size: 2vw; }
+    * .main .content_wrapper .side_content .side_content_wrapper {
       height: auto; }
-      * .main .sponsor .sponsor_logo {
-        width: 100%;
-        height: 20vh;
-        margin-bottom: 10%; }
-        * .main .sponsor .sponsor_logo img {
-          padding: 15%;
-          width: auto; }
-    * footer {
-      height: 10vh; }
-      * footer .footer_wrapper {
-        width: 90%;
-        height: 100%;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
-            -ms-flex-direction: column-reverse;
-                flex-direction: column-reverse;
-        -webkit-box-pack: space-evenly;
-            -ms-flex-pack: space-evenly;
-                justify-content: space-evenly; }
-        * footer .footer_wrapper .footer_icons {
-          width: 50%; }
-          * footer .footer_wrapper .footer_icons img {
-            height: 2.5vh; }
-        * footer .footer_wrapper .footer_info {
-          font-size: 0.7rem; } }
+      * .main .content_wrapper .side_content .side_content_wrapper .weather_report .weather_header_info .weather_header_report {
+        font-size: 2.2vw; }
+      * .main .content_wrapper .side_content .side_content_wrapper .weather_report .weather_header_info .weather_header_date {
+        font-size: 1.6vw; }
+      * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .temperature .temperature_value {
+        font-size: 11vw;
+        line-height: 9vw; }
+      * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .temperature .temperature_discription {
+        font-size: 3vw; }
+      * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .weather_details .weather_pressure, * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .weather_details .weather_humidity, * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .weather_details .weather_wind {
+        height: 20%;
+        font-size: 2.5vw; }
+      * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .weather_details .weather_forecast_info {
+        padding-top: 0;
+        padding-right: 0; }
+        * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .weather_details .weather_forecast_info h3 {
+          font-size: 1.4vw; }
+        * .main .content_wrapper .side_content .side_content_wrapper .weather_widget .weather_details .weather_forecast_info p {
+          font-size: 1.2vw; }
+  * .main .faq .faq_container .title p {
+    font-size: 2.5vw; }
+  * .main .faq .faq_container .item p:last-child {
+    font-size: 2vw; }
+  * footer {
+    height: 7vw; }
+    * footer .footer_wrapper {
+      width: 90%; }
+      * footer .footer_wrapper .footer_info {
+        font-size: 2vw; }
+      * footer .footer_wrapper .footer_icons {
+        width: 30%; }
+        * footer .footer_wrapper .footer_icons a img {
+          height: auto; } }
+@media screen and (max-width: 414px) and (orientation: portrait) {
+  * header .header_wrapper .header_logo p, * header .header_wrapper .header_logo p span {
+    font-size: 2vh; }
+  * header .header_wrapper .sandwich_menu {
+    font-size: 3vh; }
+  * header .header_wrapper .header_nav {
+    margin-top: 25%;
+    width: 100%;
+    padding-left: 15%; }
+    * header .header_wrapper .header_nav a {
+      font-size: 2vh;
+      padding: 4%; }
+    * header .header_wrapper .header_nav button {
+      width: 100px;
+      height: 50px;
+      font-size: 2vh; }
+  * header .header_wrapper.hidden {
+    display: none; }
+  * .main .content_wrapper .main_content {
+    width: 90%; }
+    * .main .content_wrapper .main_content p {
+      font-size: 2vh; }
+    * .main .content_wrapper .main_content .info_btn {
+      height: 5vh; }
+      * .main .content_wrapper .main_content .info_btn a {
+        font-size: 2vh; }
+    * .main .content_wrapper .main_content .search::-webkit-input-placeholder {
+      font-size: 1.5vh; }
+    * .main .content_wrapper .main_content .search:-ms-input-placeholder {
+      font-size: 1.5vh; }
+    * .main .content_wrapper .main_content .search::-ms-input-placeholder {
+      font-size: 1.5vh; }
+    * .main .content_wrapper .main_content .search::placeholder {
+      font-size: 1.5vh; }
+    * .main .content_wrapper .main_content .submit {
+      font-size: 1.8vh; }
+  * .main .content_wrapper .side_content {
+    width: 90%; }
+    * .main .content_wrapper .side_content img {
+      width: 100%; }
+  * .main .faq {
+    width: 90%; }
+    * .main .faq .faq_container .title p {
+      font-size: 2.2vh; }
+    * .main .faq .faq_container .item p:last-child {
+      font-size: 1.8vh; }
+  * .main .sponsor {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto; }
+    * .main .sponsor .sponsor_logo {
+      width: 100%;
+      height: 20vh;
+      margin-bottom: 10%; }
+      * .main .sponsor .sponsor_logo img {
+        padding: 15%;
+        width: auto; }
+  * footer {
+    height: 10vh; }
+    * footer .footer_wrapper {
+      width: 90%;
+      height: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse;
+      -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly; }
+      * footer .footer_wrapper .footer_icons {
+        width: 50%; }
+        * footer .footer_wrapper .footer_icons img {
+          height: 2.5vh; }
+      * footer .footer_wrapper .footer_info {
+        font-size: 0.7rem; } }
 
 /*# sourceMappingURL=style.css.map */
