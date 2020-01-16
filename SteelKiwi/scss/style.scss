@@ -1,0 +1,820 @@
+* {
+   padding: 0;
+   margin: 0;
+
+header { 
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 15%;
+    transform: (translateY(0));
+    transition: transform .5s ease-in-out;
+    .header_wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1420px;
+        margin: 0 auto;
+        padding: 5%;
+        .header_logo {
+            display: flex;
+            justify-content: flex-start;
+            width: 40%;
+            height: 24px;
+            color: #ffffff;
+            font-family: "Futura BT - Book","Poppins", sans-serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            line-height: 1rem;
+                p {
+                letter-spacing: 0.15rem;
+                    span {
+                    color: #00bfff;
+                    font-size: 1.9rem;
+                    letter-spacing: 0.2rem;
+                    }
+                }
+        }
+        .sandwich_menu {
+            width: 20%;
+            display: none;
+            font-size: 2em;
+            width: auto;
+            cursor: pointer;
+            .bars {
+                color: #fff;
+            }
+        }
+        .header_nav {
+            width: 60%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            list-style-type: none;
+                    a {
+                    color: #fff;
+                    font-size: 1.2rem;
+                    font-family: 'Poppins', sans-serif;
+                    margin: 4%;
+                    text-decoration: none;                  
+                    }
+                button {
+                        width: 140px;
+                        height: 70px;
+                        white-space: nowrap;
+                        border: 0px;
+                     border-color: transparent;
+                        border-radius: 5%;
+                        font-size: 1.2rem;
+                        letter-spacing: 0.5px;
+                        font-family: 'Poppins', sans-serif;
+                        color: white; 
+                        background-color: #f6ca43;
+                        background-image: linear-gradient(to right, #00bfff 0%, #007ddb 100%);
+                }
+        }
+    }
+    &.hidden {
+        transform: (translateY(-100%));
+        transition: transform .5s ease-in-out;
+    }
+}
+main {
+    background-image: url("../img/Vector_Smart_Object41.jpg");
+}
+.main {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;  
+    .content_wrapper {
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        max-width: 1420px;
+        margin: 0 auto;
+        padding: 5% 5% 0 5%;
+    }  
+    .main_content {
+        height: 70%;
+        width: 44%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 10%;
+        h2 {
+            color: #fff;
+            font-size: 3rem;
+            font-weight: 400;
+            font-family: "Futura BT - Book","Poppins", sans-serif;
+        }
+        p {
+            color: #fff;
+            font-size: 1.1rem;
+            font-family: "Poppins", sans-serif;
+            padding: 7% 0;
+            white-space: pre-line;
+        }
+        .info_btn {
+            width: 40%;
+            height: 12%;
+            padding-top: 5%;
+            a {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                border: 0px;
+                border-color: transparent;
+                border-radius: 5px;
+                font-size: 1.2rem;
+                letter-spacing: 0.5px;
+                font-family: 'Poppins', sans-serif;
+                color: white;
+                background-image: linear-gradient(-120deg, #00bfff 0%, #007ddb 100%);
+            }
+        }       
+        form {
+            height: 12%;
+            display: flex;
+            padding: 3% 0;
+                .search {
+                    height: 100%;
+                    width: 65%;
+                    line-height: 2rem;
+                    border-radius: 5px 0 0 5px;
+                    color: #fff;
+                    background: #f4f4f533;
+                    border: none;
+                    font-size: 1rem;
+                    &::placeholder {
+                        color: #b7b7b7;
+                        padding-left: 10%;
+                      }
+                }
+                .submit {
+                    height: 100%;
+                    width: 35%;
+                    margin-right: 2%;
+                        border: 0px;
+                        border-color: transparent;
+                        border-radius: 0 5px 5px 0;
+                        font-size: 1rem;
+                        letter-spacing: 0.5px;
+                        font-family: 'Poppins', sans-serif;
+                        color: white;
+                        background-image: linear-gradient(-120deg, #00bfff 0%, #007ddb 100%);
+                }
+        }
+        p:last-child {
+            padding: 0;
+        }
+    }
+    .side_content {
+        height: 70%;
+        width: 56%;
+        .side_content_wrapper {
+            background-color: #340ea9;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            .weather_report {
+                display: flex;
+                align-items: center;
+                background-color: #461db6;
+                color: #fff;
+                height: 20%;
+                border-radius: 10px 10px 0 0;
+                .weather_header_icon {
+                    width: 20%;
+                }
+                .weather_header_info {
+                    height: 100%;
+                    width: 70%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    font-family: 'Poppins', sans-serif;
+                    .weather_header_report {
+                        text-transform: uppercase;
+                        font-size: 1.6rem;
+                    }
+                    .weather_header_date {
+                        font-size: 1rem;
+                    }
+                }
+            }
+            .weather_widget {
+                padding: 2%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .temperature {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    color: #fff;
+                    background-color: #431cb3;
+                    font-family: 'Poppins', sans-serif;
+                    width: 40%;
+                    .temperature_weather_icon {
+                        position: absolute;
+                        width: 100%;
+                        img {
+                            opacity: 0.2;
+                        }
+                    }
+                    .temperature_value {
+                        font-size: 8rem;
+                        line-height: 7rem;
+                    }
+                    .temperature_discription {
+                        font-size: 2rem; 
+                    }
+                }
+                .weather_details {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    color: #fff;
+                    background-color: #3e17b4;
+
+                    width: 58%;
+                    .weather_pressure {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        font-size: 2rem;
+                        height: 20%;
+                        font-family: 'Poppins', sans-serif;
+                        img {
+                            width: 15%;
+                            padding: 5%;
+                        }
+                    }
+                    .weather_humidity {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        font-size: 2rem;
+                        height: 20%;
+                        font-family: 'Poppins', sans-serif;
+                        img {
+                            width: 15%;
+                            padding: 5%;
+                        }
+                    }
+                    .weather_wind {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        font-size: 2rem;
+                        height: 20%;
+                        font-family: 'Poppins', sans-serif;
+                        img {
+                            width: 15%;
+                            padding: 5%;
+                        }
+                    }
+                    .weather_forecast_info {
+                        height: 20%;
+                        padding: 5%;
+                        font-family: 'poppins';
+                        h3 {
+                            font-size: 1rem;
+                        }
+                        p {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+        img {
+            width: 90%;
+            height: auto;
+            float: right;
+        }
+    }
+    .faq {
+        width: 70%;
+        margin: 0 auto;
+        h2 {
+            color: #fff;
+            font-size: 3vw;
+            font-weight: 600;
+            font-family: "Futura BT - Book","Poppins", sans-serif;
+            text-align: center;
+            padding-bottom: 10%;
+        }
+        .faq_container {
+                margin-bottom: 3%;
+                border: 1px solid #4114b8;
+                border-radius: 5px;
+                position: relative;
+
+            .title {
+                p {
+                    color: #fff;
+                    font-size: 1.5rem;
+                    font-family: "Poppins", sans-serif;
+                    padding: 3%;
+                }
+            }
+            .item {
+                display: none;
+                border-radius: 5px;
+                width: 90%;
+                color: #fff;
+                font-size: 1.2rem;
+                font-family: "Poppins", sans-serif;
+                p:last-child {
+                    padding: 0% 3% 3% 3%;
+                    font-size: 1.2rem;
+                }
+            }
+            &:after {
+                content: '\02C5';
+                color: #fff;
+                font-weight: 700;
+                font-size: 2vw;
+                position: absolute;
+                right: 0;
+                top: 0;
+                padding: 3% 2%;
+            }
+            &.expanded {
+                background-image: linear-gradient(-70deg, #210594 0%, #4114b8 100%);
+                &:after {
+                    transform: rotate(180deg);
+                    transition: all ease .5s;
+                  }
+                .item {
+                    display: block;
+                }
+            }
+        }
+    }
+    .sponsor {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 70%;
+        height: 12vh;
+        padding: 10%;
+        .sponsor_logo {
+            background-color: #fff;
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            img {
+                width: 70%;
+            }
+        }
+    }
+}
+section {
+    background-image: url("../img/bg.jpg");
+}
+
+footer {
+    width: 100%;
+    height: 5vh;
+    background-color: #4114b8;
+    display: flex;
+    align-items: center;
+    .footer_wrapper {
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .footer_info {
+            color: #fff;
+            font-size: 0.8rem;
+            font-family: "Poppins", sans-serif;
+            span {
+                color: #00bfff;
+                text-transform: uppercase;
+            }
+        }
+        .footer_icons {
+            display: flex;
+            width: 20%;
+            justify-content: space-between;
+            img {
+                height: 2vh;
+                cursor: pointer;
+            }
+        }
+    }
+}
+}
+
+@media screen and ( max-width: 1024px ) and ( orientation: portrait ) {
+* { padding: 0;
+    margin: 0;
+    header {
+        display: flex;
+        flex-direction: row;
+        .header_wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            .header_logo {
+                justify-content: center;
+            }
+            .sandwich_menu {
+                
+                display: flex;
+                justify-content: center;
+                padding: 3%;
+            }
+            .header_nav {
+                display: none;
+                position: absolute;
+                margin-top: 10%;
+                width: 80%;
+            }
+        }
+    }
+    .main {
+        .content_wrapper {
+            flex-direction: column;
+            justify-content: center;
+            .main_content {
+                padding-bottom: 5%;
+                justify-content: flex-end;
+                text-align: center;
+                height: 40%;
+                h2 {
+                    font-size: 3vh;
+                }
+                p {
+                    font-size: 1.5vh;
+                }
+                .info_btn {
+                align-self: center;
+                }
+            }
+            .side_content {
+                height: 40%;
+                .side_content_wrapper {
+                    .weather_report {
+                        .weather_header_info {
+                            .weather_header_report {
+                                font-size: 1.7vh;
+                            }
+                            .weather_header_date {
+                                font-size: 1.2vh;
+                            }
+
+                        }
+                    }
+                    .weather_widget {
+                        .temperature {
+                            .temperature_value {
+                                font-size: 8vh;
+                                line-height: 7vh;
+                            }
+                            .temperature_discription {
+                                font-size: 2vh;
+                            }
+                        }
+                        .weather_details {
+                            .weather_pressure {
+                                font-size: 2vh;
+                            }
+                            .weather_humidity {
+                                font-size: 2vh;
+                            }
+                            .weather_wind {
+                                font-size: 2vh;
+                            }
+                            .weather_forecast_info {
+                                h3 {
+                                    font-size: 1.2vh;
+                                }
+                                p {
+                                    font-size: 0.9vh;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .faq {
+            h2 {
+            font-size: 3vh;
+            }
+            .faq_container {
+                .title p {
+                    font-size: 2vh;
+                }
+                .item p:last-child {
+                    font-size: 1.6vh;
+                }
+            }
+        }   
+    }
+    footer .footer_wrapper .footer_icons {
+        width: 30%;
+    }
+
+}
+}
+@media screen and ( max-width: 812px ) and ( orientation: landscape ) {
+* {
+    padding: 0;
+    margin: 0;
+    header {
+        display: flex;
+        flex-direction: row;
+        .header_wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            padding: 5%;
+            max-width: 676px;
+            .header_logo {
+       
+                p, p span {
+                    font-size: 2vw;
+                }
+            }
+            .sandwich_menu {
+                font-size: 3vw;
+                display: flex;
+                justify-content: center;
+            }
+            .header_nav {
+                display: none;
+                position: absolute;
+                margin-top: 10%;
+                width: 100%;
+                text-align: center;
+                a {
+                    font-size: 2vw;
+                }
+                button {
+                    width: 100px;
+                    height: 50px;
+                    font-size: 2vw;
+                }
+            }
+        }
+    }
+    .main {
+        .content_wrapper {
+            max-width: 676px;
+            padding: 5% 5% 0 5%;
+            .main_content {
+                padding-bottom: 0;
+                justify-content: center;
+                h2 {
+                    font-size: 3vw;
+                }
+                p {
+                    font-size: 1.5vw;
+                }
+                form {
+                    height: 15%;
+                    .search::placeholder {
+                        font-size: 1.5vw;
+                    }
+                    .submit {
+                        font-size: 1.5vw;
+                    }
+                }
+                .info_btn {
+                    align-self: center;
+                    a {
+                        font-size: 2vw;
+                    }
+                }
+            }
+            .side_content {
+                .side_content_wrapper {
+                    height: auto;
+                    .weather_report {
+                        .weather_header_info {
+                            .weather_header_report {
+                                font-size: 2.2vw;
+                            }
+                            .weather_header_date {
+                                font-size: 1.6vw;
+                            }
+                        }
+                    }
+                    .weather_widget {
+                        .temperature {
+                            .temperature_value {
+                                font-size: 11vw;
+                                line-height: 9vw;
+                            }
+                            .temperature_discription {
+                                font-size: 3vw;
+                            }
+                        }
+                        .weather_details {
+                            .weather_pressure,.weather_humidity,.weather_wind {
+                                height: 20%;
+                                font-size: 2.5vw;
+                            }
+                            .weather_forecast_info {
+                                padding-top: 0;
+                                padding-right: 0;
+                                h3 {
+                                    font-size: 1.4vw;
+                                }
+                                p {
+                                    font-size: 1.2vw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .faq {
+            h2 {
+            font-size: 3vw;
+            }
+            .faq_container {
+                .title p {
+                    font-size: 2.5vw;
+                }
+                .item p:last-child {
+                    font-size: 2vw;
+                }
+            }
+        }   
+    }
+    footer {
+        height: 7vw;
+        .footer_wrapper {
+            width: 90%;
+            .footer_info {
+                font-size: 2vw;
+            }
+            .footer_icons {
+                width: 30%;
+                a {
+                    img {
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+
+}
+}
+@media screen and ( max-width: 414px ) and ( orientation: portrait ) {
+    * { padding: 0;
+        margin: 0;
+        header {
+            display: flex;
+            flex-direction: row;
+            .header_wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                .header_logo {
+                    justify-content: center;
+                    p, p span {
+                        font-size: 2vh;
+                    }
+                }
+                .sandwich_menu {
+                    font-size: 3vh;
+                    display: flex;
+                    justify-content: center;
+                    padding: 3%;
+                }
+                .header_nav {
+                    display: none;
+                    position: absolute;
+                    margin-top: 25%;
+                    width: 100%;
+                    padding-left: 15%;
+                    a {
+                        font-size: 2vh;
+                        padding: 4%;
+                    }
+                    button {
+                        width: 100px;
+                        height: 50px;
+                        font-size: 2vh;
+                    }
+                }
+            }
+        }
+        .main {
+            .content_wrapper {
+                justify-content: center;
+                .main_content {
+                    height: 40%;
+                    width: 90%;
+                    h2 {
+                        font-size: 3vh;
+                    }
+                    p {
+                        font-size: 2vh;
+                    }
+                    .info_btn {
+                    align-self: center;
+                    height: 5vh;
+                        a {
+                            font-size: 2vh;
+                        }
+                    }
+                    .search::placeholder {
+                        font-size: 1.5vh;
+                    }
+                    .submit {
+                        font-size: 1.8vh;
+                    }
+                }
+                .side_content {
+                    height: 40%;
+                    width: 90%;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            .faq {
+                width: 90%;
+                h2 {
+                font-size: 3vh;
+                }
+                .faq_container {
+                    .title p {
+                        font-size: 2.2vh;
+                    }
+                    .item p:last-child {
+                        font-size: 1.8vh;
+                    }
+                }
+            }
+            .sponsor {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: auto;
+                .sponsor_logo {
+                    width: 100%;
+                    height: 20vh;
+                    margin-bottom: 10%;
+                    img {
+
+                        padding: 15%;
+                        width: auto;
+                    }
+                }
+            }   
+        }
+        footer {
+            height: 10vh;
+            .footer_wrapper {
+                width: 90%;
+                height: 100%;
+                flex-direction: column-reverse;
+                justify-content: space-evenly;
+                .footer_icons {
+                    width: 50%;
+                    img {
+                        height: 2.5vh;
+                    }
+                }
+                .footer_info {
+                    font-size: 0.7rem;
+                }
+            }
+        }
+    }
+}
